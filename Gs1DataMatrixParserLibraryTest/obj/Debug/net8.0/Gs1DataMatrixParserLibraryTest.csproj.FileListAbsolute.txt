@@ -100,3 +100,4 @@ D:\TestProjects\Crpt\Gs1DataMatrixParserLibraryTest\obj\Debug\net8.0\refint\Gs1D
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibraryTest\obj\Debug\net8.0\Gs1DataMatrixParserLibraryTest.pdb
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibraryTest\obj\Debug\net8.0\Gs1DataMatrixParserLibraryTest.genruntimeconfig.cache
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibraryTest\obj\Debug\net8.0\ref\Gs1DataMatrixParserLibraryTest.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibraryTest\obj\Debug\net8.0\Gs1DataMatrixParserLibraryTest.sourcelink.json

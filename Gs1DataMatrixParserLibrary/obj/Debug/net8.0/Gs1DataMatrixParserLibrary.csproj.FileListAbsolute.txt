@@ -9,3 +9,4 @@ D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Debug\net8.0\Gs1DataMatrixPa
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Debug\net8.0\refint\Gs1DataMatrixParserLibrary.dll
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Debug\net8.0\Gs1DataMatrixParserLibrary.pdb
 D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Debug\net8.0\ref\Gs1DataMatrixParserLibrary.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Debug\net8.0\Gs1DataMatrixParserLibrary.sourcelink.json

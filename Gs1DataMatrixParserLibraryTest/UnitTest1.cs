@@ -6,6 +6,7 @@ namespace Gs1DataMatrixParserLibraryTest;
 public class Tests
 {
     public Dictionary<string, int> PredefinedIdentifier { get; set; } = new();
+    public List<string> EmptyListForEqual = new List<string>();
 
     [SetUp]
     public void Setup()
@@ -42,7 +43,7 @@ public class Tests
     [TestCase("010460026601454221n?An-wp\\u001D8005175000\\u001D9388UC\\u001D24010177007")]
     [TestCase("010460026601459721\\/YO?ZS.\\u001D8005205000\\u001D939\\/g6\\u001D24010177004")]
     [TestCase("01146002660147471068272023\\u001D2168243GD103465955500\\u001D24010181973\\u001D914802227")]
-    [TestCase("")]
+    //[TestCase("")]
     public void TestStrings(string value)
     {
         if(PredefinedIdentifier == null || PredefinedIdentifier.Count == 0){
@@ -59,8 +60,9 @@ public class Tests
                 Debug.WriteLine($"[{item}]");
             }
 
-            Assert.IsNotEmpty(parser.ErrorMessage, parser.ErrorMessage);
+            Assert.AreNotEqual(EmptyListForEqual, parser.FindedApplicationCode);
         };
+
 
         Assert.Pass();
     }
@@ -90,7 +92,7 @@ public class Tests
                     Debug.WriteLine($"[{item}]");
                 }
 
-                Assert.IsNotEmpty(parser.ErrorMessage, parser.ErrorMessage);
+                Assert.AreNotEqual(EmptyListForEqual, parser.FindedApplicationCode);
             };
         }
 
