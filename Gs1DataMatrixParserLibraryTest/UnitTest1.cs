@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Gs1DataMatrixParserLibrary;
 
 namespace Gs1DataMatrixParserLibraryTest;
@@ -6,7 +5,9 @@ namespace Gs1DataMatrixParserLibraryTest;
 public class Tests
 {
     public Dictionary<string, int> PredefinedIdentifier { get; set; } = new();
-    public List<string> EmptyListForEqual = new List<string>();
+    public static string[] DivideCases => File.ReadAllLines("test.txt");
+    //public TestContext TestContext { get; set; }
+
 
     [SetUp]
     public void Setup()
@@ -36,6 +37,7 @@ public class Tests
         };
     }
 
+
     [TestCase("010460026601479521V:!CE\\\"K\\u001D8005149000\\u001D93lSKY\\u001D24010181884")]
     [TestCase("0104600266014757219.r\\/q6d\\u001D8005165000\\u001D93p3dI\\u001D24010177027")]
     [TestCase("010460026601474021fwAoGji\\u001D8005165000\\u001D93izks\\u001D24010177026")]
@@ -43,59 +45,52 @@ public class Tests
     [TestCase("010460026601454221n?An-wp\\u001D8005175000\\u001D9388UC\\u001D24010177007")]
     [TestCase("010460026601459721\\/YO?ZS.\\u001D8005205000\\u001D939\\/g6\\u001D24010177004")]
     [TestCase("01146002660147471068272023\\u001D2168243GD103465955500\\u001D24010181973\\u001D914802227")]
-    //[TestCase("")]
-    public void TestStrings(string value)
+    public void TestIncomingStrings(string value)
     {
-        if(PredefinedIdentifier == null || PredefinedIdentifier.Count == 0){
-            Assert.IsEmpty("PredefinedIdentifier is null or empty");
-        }
-
         using (var parser = new Parser(value, PredefinedIdentifier ?? new()))
         {
-            parser.ReadString();
-
-            Debug.WriteLine($"{value} Parsed:");
-
-            foreach(var item in parser.FindedApplicationCode){
-                Debug.WriteLine($"[{item}]");
-            }
-
-            Assert.AreNotEqual(EmptyListForEqual, parser.FindedApplicationCode);
+            CheckResult(value, parser);
         };
+    }    
 
 
-        Assert.Pass();
+    [TestCaseSource(nameof(DivideCases))]
+    public void TestIncomingByteArray(string value)
+    {
+        using (var parser = new Parser(System.Text.Encoding.ASCII.GetBytes(value), PredefinedIdentifier ?? new()))
+        {
+            CheckResult(value, parser);
+        };
     }
 
 
-    [TestCase()]
-    public void TestFromFile()
+    /// <summary>
+    /// Check is code parser
+    /// </summary>
+    /// <param name="input">incoming string</param>
+    /// <param name="parser">inited parsef, after use ReadString() method</param>
+    /// <returns></returns>
+    private void CheckResult(string value, Parser parser)
     {
-        if(!File.Exists("test.txt"))
-            Assert.IsEmpty("file not exists");
-
-        var rows = File.ReadAllLines("test.txt");
+        var result = false;
         
-        if(rows.Length == 0)
-            Assert.IsEmpty("file is empty");
+        parser.ReadString();        
 
-        foreach (var line in rows)
+        if(value.StartsWith("01"))
         {
-            using (var parser = new Parser(System.Text.Encoding.ASCII.GetBytes(line), PredefinedIdentifier))
+            if (parser.FindedApplicationCode.Count > 1 
+                && parser.FindedApplicationCode.Exists(x => x.StartsWith("01")) 
+                && parser.FindedApplicationCode.Exists(x => x.StartsWith("21")))
             {
-                parser.ReadString();
-
-                Debug.WriteLine($"{line.ToString()} Parsed:");
-
-                foreach (var item in parser.FindedApplicationCode)
-                {
-                    Debug.WriteLine($"[{item}]");
-                }
-
-                Assert.AreNotEqual(EmptyListForEqual, parser.FindedApplicationCode);
-            };
+                result = true;
+            }
+        }
+        else
+        {
+            // Ќе начинаетс€ с 01 кода применени€, значит это UNIT
+            result = parser.FindedApplicationCode.Count > 0;
         }
 
-        Assert.Pass();
+        Assert.That(result, Is.True);
     }
 }
