@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gs1DataMatrixParserLibrary"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gs1DataMatrixParserLibraryTest", "Gs1DataMatrixParserLibraryTest\Gs1DataMatrixParserLibraryTest.csproj", "{BC4792FC-F3FE-491D-9FCE-F2A21CBB6D23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBuilderLibrary", "CodeBuilderLibrary\CodeBuilderLibrary.csproj", "{0DC073AE-912E-4CAB-81BB-2D12252C06F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeBuilderLibraryTest", "CodeBuilderLibraryTest\CodeBuilderLibraryTest.csproj", "{2E0A5F84-13EE-43C8-A74B-B6090E235250}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{BC4792FC-F3FE-491D-9FCE-F2A21CBB6D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC4792FC-F3FE-491D-9FCE-F2A21CBB6D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC4792FC-F3FE-491D-9FCE-F2A21CBB6D23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DC073AE-912E-4CAB-81BB-2D12252C06F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DC073AE-912E-4CAB-81BB-2D12252C06F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DC073AE-912E-4CAB-81BB-2D12252C06F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DC073AE-912E-4CAB-81BB-2D12252C06F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E0A5F84-13EE-43C8-A74B-B6090E235250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E0A5F84-13EE-43C8-A74B-B6090E235250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E0A5F84-13EE-43C8-A74B-B6090E235250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E0A5F84-13EE-43C8-A74B-B6090E235250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

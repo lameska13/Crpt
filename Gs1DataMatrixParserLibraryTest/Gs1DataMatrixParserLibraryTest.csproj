@@ -21,4 +21,10 @@
     <ProjectReference Include="..\Gs1DataMatrixParserLibrary\Gs1DataMatrixParserLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

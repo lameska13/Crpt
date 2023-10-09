@@ -33,19 +33,51 @@ namespace Gs1DataMatrixParserLibrary
         {
         }
 
-        public Parser(Byte[] incomintStrAsByte, Dictionary<string, int> predefinedIdentifier)
+        public Parser(Byte[] incomintStrAsByte, Dictionary<string, int>? predefinedIdentifier = null)
         {
+            PredefinedIdentifier = predefinedIdentifier ?? InitPredefinedIdentifier();
             IncomingString = incomintStrAsByte;
-            PredefinedIdentifier = predefinedIdentifier;
         }
 
-        public Parser(string incomintStr, Dictionary<string, int> predefinedIdentifier)
+        public Parser(string incomintStr, Dictionary<string, int>? predefinedIdentifier = null)
         {
             var rx = new System.Text.RegularExpressions.Regex(@"\\[uU]([0-9A-F]{4})");
             incomintStr = rx.Replace(incomintStr, match => ((char)int.Parse(match.Value[2..], System.Globalization.NumberStyles.HexNumber)).ToString());
 
+            PredefinedIdentifier = predefinedIdentifier ?? InitPredefinedIdentifier();
             IncomingString = Encoding.ASCII.GetBytes(incomintStr);
-            PredefinedIdentifier = predefinedIdentifier;
+        }
+
+
+        /// <summary>
+        /// Если не передали список предопределенных кодов применений
+        /// </summary>
+        /// <returns>Dictionary<string, int></returns>
+        private Dictionary<string, int> InitPredefinedIdentifier()
+        {
+            return new Dictionary<string, int>{
+                {"00", 20},
+                {"01", 16},
+                {"02", 16},
+                {"03", 16},
+                {"11", 8},
+                {"12", 8},
+                {"13", 8},
+                {"14", 8},
+                {"15", 8},
+                {"16", 8},
+                {"17", 8},
+                {"18", 8},
+                {"19", 8},
+                {"20", 4},
+                {"31", 10},
+                {"32", 10},
+                {"33", 10},
+                {"34", 10},
+                {"35",  10},
+                {"36", 10},
+                {"41", 16}
+            };
         }
 
 
