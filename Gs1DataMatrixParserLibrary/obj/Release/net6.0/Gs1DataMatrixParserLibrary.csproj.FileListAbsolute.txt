@@ -1,0 +1,12 @@
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\bin\Release\net6.0\Gs1DataMatrixParserLibrary.deps.json
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\bin\Release\net6.0\Gs1DataMatrixParserLibrary.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\bin\Release\net6.0\Gs1DataMatrixParserLibrary.pdb
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.AssemblyInfoInputs.cache
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.AssemblyInfo.cs
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.csproj.CoreCompileInputs.cache
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\refint\Gs1DataMatrixParserLibrary.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.pdb
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\ref\Gs1DataMatrixParserLibrary.dll
+D:\TestProjects\Crpt\Gs1DataMatrixParserLibrary\obj\Release\net6.0\Gs1DataMatrixParserLibrary.csproj.AssemblyReference.cache

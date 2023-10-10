@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeBuilderLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7d3b3048b7d5574a8a88268eefa1524d992f03c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba5351096f0bd54746355d72d737d5f37828c3f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeBuilderLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeBuilderLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

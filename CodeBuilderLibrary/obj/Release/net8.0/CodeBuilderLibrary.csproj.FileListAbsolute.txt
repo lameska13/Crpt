@@ -1,0 +1,12 @@
+D:\TestProjects\Crpt\CodeBuilderLibrary\bin\Release\net8.0\CodeBuilderLibrary.deps.json
+D:\TestProjects\Crpt\CodeBuilderLibrary\bin\Release\net8.0\CodeBuilderLibrary.dll
+D:\TestProjects\Crpt\CodeBuilderLibrary\bin\Release\net8.0\CodeBuilderLibrary.pdb
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.AssemblyInfoInputs.cache
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.AssemblyInfo.cs
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.csproj.CoreCompileInputs.cache
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.sourcelink.json
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.dll
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\refint\CodeBuilderLibrary.dll
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\CodeBuilderLibrary.pdb
+D:\TestProjects\Crpt\CodeBuilderLibrary\obj\Release\net8.0\ref\CodeBuilderLibrary.dll

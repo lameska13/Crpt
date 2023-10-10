@@ -31,6 +31,7 @@ namespace Gs1DataMatrixParserLibrary
 
         public Parser()
         {
+            PredefinedIdentifier = InitPredefinedIdentifier();
         }
 
         public Parser(Byte[] incomintStrAsByte, Dictionary<string, int>? predefinedIdentifier = null)

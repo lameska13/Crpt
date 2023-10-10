@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="input">List of available codes</param>
         /// <param name="str">Exapme: "01 + 21 + 240" or "01 + 21 + 8005 + 240"</param>
-        public string GeneratePossibleCodes(List<string> input, string str)
+        public string GeneratePossibleCodes(IEnumerable<string> input, string str)
         {
             if(input is null || string.IsNullOrEmpty(str))
                 throw new ArgumentNullException();
@@ -32,7 +32,7 @@
         /// <param name="input">List of codes</param>
         /// <param name="str">Identifier</param>
         /// <returns></returns>
-        private string FindCodeByPredefinedIdentifier(List<string> input, string str) => input?.Find(x => x.StartsWith(str)) ?? "";
+        private string FindCodeByPredefinedIdentifier(IEnumerable<string> input, string str) => input?.Find(x => x.StartsWith(str)) ?? "";
     }
 }
 
