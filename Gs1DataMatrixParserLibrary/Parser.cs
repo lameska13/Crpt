@@ -199,7 +199,10 @@ namespace Gs1DataMatrixParserLibrary
         {
             try
             {
-                FindedApplicationCode?.Add(Encoding.ASCII.GetString(Buffer));
+                var bufferString = Encoding.ASCII.GetString(Buffer);
+
+                if(!string.IsNullOrEmpty(bufferString))
+                    FindedApplicationCode?.Add(bufferString);
             }
             catch (ArgumentException ex)
             {
@@ -385,7 +388,7 @@ namespace Gs1DataMatrixParserLibrary
         /// </summary>
         private void MovePastGsOne()
         {
-            if (IncomingString[Cursor] == _gs1)
+            if ((IncomingString.Length - Cursor) > 0 && IncomingString[Cursor] == _gs1)
                 Cursor++;
         }
 
